@@ -1,5 +1,5 @@
 public class Relatorio {
-    public void gerarRelatorio(IImprimivel imprimivel){
-        imprimivel.mostrarDados();
+    public String gerarRelatorio(IImprimivel imprimivel){
+        return imprimivel.mostrarDados();
     }
 }

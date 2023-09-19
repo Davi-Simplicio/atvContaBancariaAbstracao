@@ -1,9 +1,9 @@
-public class ContaPoupanca extends ContaBancaria implements IImprimivel{
-    double limite;
+public class ContaPoupanca extends ContaBancaria{
+    private double limite;
 
     @Override
     public void sacar(double valor) {
-        if (valor<=saldo+limite){
+        if (valor<=getSaldo()+limite){
             super.sacar(valor);
         }
     }
@@ -11,6 +11,10 @@ public class ContaPoupanca extends ContaBancaria implements IImprimivel{
     @Override
     public String mostrarDados() {
         return toString();
+    }
+
+    public void setLimite(double limite) {
+        this.limite = limite;
     }
 
     @Override
