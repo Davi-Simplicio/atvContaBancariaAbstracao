@@ -2,6 +2,19 @@ public abstract class ContaBancaria implements IImprimivel{
     private int numeroDaConta;
     private double saldo;
 
+    public ContaBancaria(int numeroDaConta, double saldo) {
+        this.numeroDaConta = numeroDaConta;
+        this.saldo = saldo;
+    }
+
+    public void setNumeroDaConta(int numeroDaConta) {
+        this.numeroDaConta = numeroDaConta;
+    }
+
+    public int getNumeroDaConta() {
+        return numeroDaConta;
+    }
+
     public void sacar(double valor) {
             this.saldo -= valor;
     }

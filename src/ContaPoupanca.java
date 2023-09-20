@@ -1,6 +1,11 @@
 public class ContaPoupanca extends ContaBancaria{
     private double limite;
 
+    public ContaPoupanca(int numeroDaConta, double saldo, double limite) {
+        super(numeroDaConta, saldo);
+        this.limite = limite;
+    }
+
     @Override
     public void sacar(double valor) {
         if (valor<=getSaldo()+limite){
